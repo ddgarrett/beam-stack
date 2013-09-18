@@ -1,4 +1,4 @@
-beam_stack
+beam-stack
 ==========
 
 Bootstrap, Express, AngularJS and MongoDB software stack. Keep it Simple. Keep it Agile.
