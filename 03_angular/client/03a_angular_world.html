@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <title>Angular Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script 
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js">
+    </script>
+    
+    <script>
+      function HelloCntl($scope) {
+        $scope.say = 'Hello';
+      }
+    </script>
+    
+  </head>
+  
+  <body>
+    <div ng-controller="HelloCntl">
+      Say to the world:  <input type="text" ng-model="say">
+      <h1>{{say}} world!</h1>
+    </div>
+
+    
+  </body>
+</html>

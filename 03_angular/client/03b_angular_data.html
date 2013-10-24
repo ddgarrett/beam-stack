@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <title>Angular Data Structures</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="js/03b_tmtcntl.js"></script>
+    
+  </head>
+  <body>
+    <div ng-controller="TmtCntl">
+      name: {{user.fName}} {{user.lName}}<br>
+      <br>
+      <ul>
+        <li ng-repeat="subscription in collections.subscribed">
+          {{subscription}}
+        </li>
+      </ul>
+      
+      <ul>
+        <li ng-repeat="view in collections.views">
+          {{view}}
+        </li>
+      </ul>
+      
+    </div>
+    
+  </body>
+</html>
