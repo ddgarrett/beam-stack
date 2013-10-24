@@ -2,7 +2,7 @@
 function TmtCntl($scope) {
   $scope.user = {
         fName: 'Jane',
-        lName: 'Smith', 
+        lName: 'Smith'
     };
     
   $scope.collections = {
