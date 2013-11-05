@@ -45,7 +45,7 @@ function TmtCntl($scope) {
         else {
             $scope.collectionData.rows = $scope.collectionDataRows_1;
         }
-    }
+    };
     
     // If the passed subscription is the "currColl" (current collection)
     // return empty string, else return "font-white" to hide the menu Checkmark
@@ -54,7 +54,7 @@ function TmtCntl($scope) {
         return '';
       }
       return 'font-white'
-    }
+    };
     
     // Show the specified collection
     // TODO: finish this function
@@ -63,7 +63,7 @@ function TmtCntl($scope) {
         $scope.collections.currColl = subscription;
         console.log('show collection ' + subscription);
       }
-    }
+    };
 
     // If the passed view is the "currView" (current view)
     // return empty string, else return "font-white" to hide the menu Checkmark
@@ -72,7 +72,7 @@ function TmtCntl($scope) {
         return '';
       }
       return 'font-white'
-    }
+    };
     
     // Show the specified view
     // TODO: finish this function
