@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <title>Bootstrap + Angular</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"> </link>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="js/03e_tmtcntl.js"></script>
+    
+    <style>
+      .font-white {color : white; }
+      body { padding-top: 70px; }
+    </style>
+    
+  </head>
+  <body ng-controller="TmtCntl">
+  
+    <nav class="navbar navbar-default navbar-fixed-top" >
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapsible-menu-list">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">TrackMyThings</a>
+      </div>
+
+      <!-- Collapsible portion of the menu for toggling -->
+      <div class="collapse navbar-collapse collapsible-menu-list">
+      
+        <!-- List of Collections -->
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{collections.currColl}} <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li ng-repeat="subscription in collections.subscribed" >
+                 <a href="#" ng-click="showCollection(subscription)" >
+                   <span class="glyphicon glyphicon-ok {{getSubsCollCheckmarkFont(subscription)}}"></span> 
+                   {{subscription}}</a>
+              </li>
+              <li class="divider"></li>
+              <li><a href="#">Subscribe to New Collection</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- List of Views for Current Collection -->
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{collections.currView}} <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Edit View</a></li>
+              <li><a href="#">Print</a></li>
+              <li><a href="#">Download</a></li>
+              <li class="divider"></li>
+              <li ng-repeat="view in collections.views" >
+                 <a href="#" ng-click="showView(view)" >
+                   <span class="glyphicon glyphicon-ok {{getViewCheckmarkFont(view)}}"></span> 
+                   {{view}}</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        
+        <!-- Show currently signed on user -->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{user.fName}} {{user.lName}}<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><span class="glyphicon glyphicon-ok"></span> Collections</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-ok font-white" ></span> Profile</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+      </div><!-- /.navbar-collapse -->
+    </nav>
+
+    <!-- Data Table -->
+    <table class="table table-striped table-bordered table-hover table-condensed">
+      <thead><tr>
+        <th ng-repeat="field in collectionData.fields">
+          {{field}}
+        </th>
+      </tr></thead>
+      <tr ng-repeat="row in collectionData.rows">
+        <td ng-repeat="field in row">{{field}}</td>
+      </tr>
+    </table>
+
+    
+    <ul class="pagination">
+      <li><a href="#" title="Previous" ng-click="toggleData(view)" >&laquo;</a></li>
+      <li class="active"><a href="#"  ng-click="toggleData(view)">1</a></li>
+      <li><a href="#"  ng-click="toggleData(view)">2</a></li>
+      <li><a href="#"  ng-click="toggleData(view)">3</a></li>
+      <li><a href="#"  ng-click="toggleData(view)">4</a></li>
+      <li><a href="#"  ng-click="toggleData(view)">5</a></li>
+       <li><a href="#" title="Next"  ng-click="toggleData(view)">&raquo;</a></li>
+    </ul>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Menu Collapse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"></link>
+    
+    <style>
+      .font-white {color : white; }
+    </style>
+    
+  </head>
+  <body>
+  
+    <nav class="navbar navbar-default" role="navigation">
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapsible-menu-list">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">TrackMyThings</a>
+      </div>
+
+      <!-- Collapsible portion of the menu for toggling -->
+      <div class="collapse navbar-collapse collapsible-menu-list">
+      
+        <!-- List of Collections -->
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Trains <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><span class="glyphicon glyphicon-ok"></span> Trains</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-ok font-white" ></span> Music</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-ok font-white" ></span> Books</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Subscribe to New Collection</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- List of Views for Current Collection -->
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Complete Database Listing <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Edit View</a></li>
+              <li><a href="#">Print</a></li>
+              <li><a href="#">Download</a></li>
+              <li class="divider"></li>
+              <li><a href="#"><span class="glyphicon glyphicon-ok " ></span> Complete Database Listing</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-ok font-white" ></span> Coupler Conversion Maintenance Report</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-ok font-white" ></span> Duplicate Road Number Detection Report</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-ok font-white" ></span> Items For Sale</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-ok font-white" ></span> Locomotive Roster File by Railroad</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-ok font-white" ></span> Owned Rolling Stock Roster File by Railroad</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-ok font-white" ></span> Physical Inventory by Storage Location</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-ok font-white" ></span> Shopping List</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-ok font-white" ></span> Wish List</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+        <!-- Show currently signed on user -->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jane Smith<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><span class="glyphicon glyphicon-ok"></span> Collections</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-ok font-white" ></span> Profile</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+      </div><!-- /.navbar-collapse -->
+    </nav>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script
+  </body>
+</html>
